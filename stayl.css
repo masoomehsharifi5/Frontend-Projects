@@ -9,11 +9,16 @@ body{
     margin: 0;
     padding: 0;
 }
-header{
+
+.main-header{
     display: flex;
     justify-content: space-between;
     color: rgb(10, 10, 10);
     align-items: center;
+    padding: 15px ;
+    background-color: aliceblue;
+    margin: 20px;
+    
    
 }
 .nav-list {
@@ -23,10 +28,12 @@ header{
     list-style: none;
     margin: 0;
     padding: 0;
+    transition: color 0.3s ease;
     
 }
 .nav-list li{
     margin: 0 15px;
+    align-items: first baseline;
     
 }
 .nav-list::after{
@@ -34,27 +41,87 @@ header{
     display: table;
     clear: both;
 }
+
+.main-title{
+
+    font-size: 1.4em;
+    color: rgb(28, 28, 247);
+    font-weight: 500;
+    
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+}
+.main-intro-title{
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #0a72e9;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    
+}
+.main-photo{
+    margin-bottom: 20px;
+    padding: 10px;
+    align-items: flex-start;
+
+}
+.heading{
+    flex-direction: column-reverse;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    
+}
 footer{
-    background-color: #333;
+    background-color: #464646;
     color: white;
-    padding: 15px;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
     text-align: center;
 }
 main{
-    padding: 20px;
-}
+    padding: 10px;
     
-section{
-    background-color: white;
-    margin-bottom: 30px;
-    padding: 20px;
-    border: 1px solid #ccc;
 }
+
+    
+
 article{
    
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 8px;
     color: rgb(14, 13, 13);
+    width: 600;
+    height: 300;
+    gap: 20px;
+}
+.projects-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    background-color: beige;
+}
+@media (max-width:780px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+
+    }
+    .main-header{
+        flex-direction: column;
+        justify-content:space-between;
+    }
+    .main-nav ul{
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .main-title{
+        margin-bottom: 10px;
+
+    }
 }
 
